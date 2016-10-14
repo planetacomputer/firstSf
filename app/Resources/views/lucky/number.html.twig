@@ -1,0 +1,14 @@
+{# app/Resources/views/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+{% block body %}
+	<h1>Your lucky number is {{ number }}</h1>
+	{{ app.session.get('intentos') }} intentos
+
+	{% for flashMessage in app.session.flashbag.get('decenaIntentos') %}
+      <div class="w3-panel w3-yellow">
+    <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-hover-text-red">&times;</span>
+    <h3>Warning!</h3>
+    <p>{{flashMessage}}</p>
+  </div>
+{% endfor %}
+{% endblock %}
