@@ -1,0 +1,30 @@
+  {% extends 'AlimentosBundle::layout.html.twig' %}
+
+  {% block contenido %}
+
+  <h1>{{ nombre }}</h1>
+  <table border="1">
+
+      <tr>
+          <td><b>Energía</b></td>
+          <td>{{ energia }} </td>
+      </tr>
+      <tr>
+          <td><b>Proteina</b></td>
+          <td>{{ proteina }}</td>
+      </tr>
+      <tr>
+          <td><b>Hidratos de Carbono</b></td>
+          <td>{{ hidratocarbono }}</td>
+      </tr>
+      <tr>
+          <td><b>Fibra</b></td>
+          <td>{{ fibra }}</td>
+      </tr>
+      <tr>
+          <td><b>Grasa total</b></td>
+          <td> {{grasatotal}} </td>
+      </tr>
+  </table>
+
+ {% endblock %}

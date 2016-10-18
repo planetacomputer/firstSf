@@ -1,0 +1,9 @@
+{% extends 'AlimentosBundle::layout.html.twig' %}
+
+  {% block contenido %}
+
+  {% if alimentos %}
+    {% include 'AlimentosBundle:Default:_tablaAlimentos.html.twig' with {'alimentos': alimentos} %}
+  {% endif %}
+
+  {% endblock %}
